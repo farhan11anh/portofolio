@@ -1,0 +1,50 @@
+[
+  {
+    "href": "https://103.147.4.212/",
+    "imgSrc": "work_imgs/sak-ep/sakep.png",
+    "title": "Satu SAK EP",
+    "description": "SAK EP (Standar Akuntansi Keuangan Entitas Privat) is an accounting standard tailored for private entities in Indonesia.",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "tailwind.svg",
+      "daisyui.svg",
+      "fastApi.svg"
+    ]
+  },
+  {
+    "href": "https://kartunikah.com/",
+    "imgSrc": "work_imgs/kartu-nikah/kartunikah.png",
+    "title": "Kartu Nikah",
+    "description": "A website where you can generate wedding invitations and publishing digitally (online)",
+    "type": "website",
+    "icons": [
+      "svelte.svg",
+      "tailwind.svg",
+      "daisyui.svg",
+      "puppeteer.svg"
+    ]
+  },
+  {
+    "href": "https://devxlhr.javan.co.id/",
+    "imgSrc": "work_imgs/xl-hr/xlhr.png",
+    "title": "XL HR Supercharged",
+    "description": "An Electronic Case Finding and Help Assessment Tool for Youth",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "tailwind.svg"
+    ]
+  },
+  {
+    "href": "https://lighthearted-naiad-5639a2.netlify.app/",
+    "imgSrc": "work_imgs/sis-pak/sispak.png",
+    "title": "Sistem Pakar Penyakit Lambung",
+    "description": "expert system for diagnosing gastric diseases",
+    "type": "website",
+    "icons": [
+      "tailwind.svg",
+      "daisyui.svg"
+    ]
+  }
+]
