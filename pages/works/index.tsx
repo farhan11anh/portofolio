@@ -1,52 +1,52 @@
 import Head from "next/head";
 import worksJson from "./works.json";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 
 const Works = () => {
   const works = worksJson;
-  const titleRef = useRef<HTMLButtonElement>(null);
+  // const titleRef = useRef<HTMLButtonElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null);
   const webappContainerRef = useRef<HTMLDivElement>(null);
   const appContainerRef = useRef<HTMLDivElement>(null);
-  const [isApp, setIsApp] = useState(false);
-  const { scrollXProgress } = useScroll({
-    container: worksContainerRef
-  });
+  // const [ setIsApp] = useState(false);
+  // const { scrollXProgress } = useScroll({
+  //   container: worksContainerRef
+  // });
 
-  const [clickMeClicked, setClickMeClicked] = useState(false);
+  // const [ setClickMeClicked] = useState(false);
 
-  const useParallax = (value: MotionValue<number>, distance: number) => {
-    return useTransform(value, [0, 1], [0, -distance]);
-  };
+  // const useParallax = (value: MotionValue<number>, distance: number) => {
+  //   return useTransform(value, [0, 1], [0, -distance]);
+  // };
 
-  const y = useParallax(scrollXProgress, 28);
+  // const y = useParallax(scrollXProgress, 28);
 
-  useEffect(() => {
-    scrollXProgress.onChange((value) => {
-      if (value === 0) {
-        setIsApp(false);
-      } else if (value === 1) {
-        setIsApp(true);
-      }
-    });
-  });
+  // useEffect(() => {
+  //   scrollXProgress.onChange((value) => {
+  //     if (value === 0) {
+  //       setIsApp(false);
+  //     } else if (value === 1) {
+  //       setIsApp(true);
+  //     }
+  //   });
+  // });
 
-  const toggleWorkType = () => {
-    if (isApp) {
-      worksContainerRef.current?.scroll({
-        left: 0,
-        behavior: "smooth"
-      });
-    } else {
-      worksContainerRef.current?.scroll({
-        left: worksContainerRef.current.offsetWidth,
-        behavior: "smooth"
-      });
-    }
-    setClickMeClicked(true);
-  };
+  // const toggleWorkType = () => {
+  //   if (isApp) {
+  //     worksContainerRef.current?.scroll({
+  //       left: 0,
+  //       behavior: "smooth"
+  //     });
+  //   } else {
+  //     worksContainerRef.current?.scroll({
+  //       left: worksContainerRef.current.offsetWidth,
+  //       behavior: "smooth"
+  //     });
+  //   }
+  //   // setClickMeClicked(true);
+  // };
 
   return (
     <motion.div
@@ -83,7 +83,6 @@ const Works = () => {
                 <WorkCard
                   key={i}
                   href={work.href}
-                  imgSrcs={work.imgSrcs}
                   imgSrc={work.imgSrc}
                   title={work.title}
                   description={work.description}
@@ -101,7 +100,6 @@ const Works = () => {
                 <WorkCard
                   key={i}
                   href={work.href}
-                  imgSrcs={work.imgSrcs}
                   imgSrc={work.imgSrc}
                   title={work.title}
                   description={work.description}
@@ -175,7 +173,7 @@ const WorkCard = ({
                   <div
                     className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
                     <div className="h-8 aspect-square">
-                      <Image width="100%" height="100%" src={`/tech-icons/${icons[i]}`} />
+                      <Image width="100%" height="100%" src={`/tech-icons/${icons[i]}`} alt="zero"/>
                     </div>
                   </div>
                 )}
@@ -202,7 +200,7 @@ const WorkCard = ({
                   ${(icons?.length === 1) && "col-span-6"} 
                   ${icons?.length % 3 === 0 && "col-span-2"}`
                   }>
-                  <Image width="100%" height="100%" src={`/tech-icons/${icon}`} />
+                  <Image width="100%" height="100%" src={`/tech-icons/${icon}`} alt="zero"/>
                 </div>
               ))}
             </div>
