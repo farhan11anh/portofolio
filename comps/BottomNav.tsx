@@ -88,18 +88,6 @@ const BottomNav = () => {
           />
         </a>
       </Link>
-      <a
-        className="h-full"
-        href="https://github.com/KeiHara/nextjs-portofolio"
-        target="_blank"
-        rel="noreferrer">
-        <SideBarIcon
-          icon={() => <FaGithub size={28} />}
-          toggled={toggledSideBarIcon[3]}
-          text="Source"
-          isDark={isDark}
-        />
-      </a>
 
       {/* theme button */}
       <motion.div
